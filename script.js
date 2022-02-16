@@ -29,6 +29,7 @@ board.forEach((row) => {
       e.preventDefault();
       markTile(tile);
       listMinesLeft();
+      checkGameEnd();
     });
   });
 });

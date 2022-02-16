@@ -66,13 +66,14 @@ export function revealTile(board, tile) {
 }
 
 export function checkWin(board) {
+  console.log("here");
   return board.every((row) => {
     return row.every((tile) => {
       return (
         tile.status === TILE_STATUSES.NUMBER ||
         (tile.mine &&
           (tile.status === TILE_STATUSES.HIDDEN ||
-            tile.status === TILE_STATUSES.HIDDEN.MARKED))
+            tile.status === TILE_STATUSES.MARKED))
       );
     });
   });
